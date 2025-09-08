@@ -1,6 +1,8 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/*Global Header*/
 #mainlogo{
   font-size: 30px;
   font-family: arial;
@@ -14,8 +16,18 @@ a{
     text-decoration: none;
 }
 
+/*Hovedinnhold*/
 article{
     margin: 1rem 0;
+    border:1px solid #efefef;
+    max-width: 400px;
+    width: 100%;
+    min-width: 250px;
+    padding: 1rem;
+
+    img{
+        width: 100%;
+    }
 }
 
 .btn{

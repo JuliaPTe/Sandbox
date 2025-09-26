@@ -3,10 +3,20 @@
     --aside: #e8dfca;
     --header: #cbdceb;
     --footer: #6d94c5;
+
+/*Lager størrelser for font*/
+    --small: clamp(14px, 1em + 1vw, 18px);
+    --medium: clamp(16px, 1em + 1vw, 20px);
+    --large: clamp(18px, 1em + 1vw, 24px);
 }
 
 *{
     box-sizing: border-box;
+}
+
+/*Setter font størrelse som er responsiv*/
+html{
+    font-size: clamp(16px, 1em + 1vw, 30px);
 }
 
 /*PÅ body-tagen*/
@@ -15,6 +25,7 @@ body{
     margin: 0;
     min-height: 100vh;
     display: flex;
+    font-size: 1rem;
 }
 
 /*PÅ div-taggen*/
@@ -28,6 +39,17 @@ body{
                         "bunn"
 }
 
+/*Måte og endre størrelsen på alle h-taggene*/
+/*h1{
+    font-size: var(--large);
+}
+h2{
+    font-size: var(--medium);
+}
+h3{
+    font-size: var(--small);
+}*/
+
 /*PÅ alle header, main, aside og fotter*/
 header, main, aside, footer{
     padding: 1rem;
@@ -37,6 +59,19 @@ header, main, aside, footer{
 header{
     background-color: var(--header);
     grid-area: topp;
+
+    nav{
+        ul{
+            list-style: none;
+
+            li{
+                a{
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+        }
+    }
 }
 
 main{
@@ -57,6 +92,12 @@ footer{
 .hidden{
     display: none;
 }
+
+img{
+    width: 100%;
+    max-width: 900px;
+}
+
 /*Brytepunkt mobil*/
 @media only screen and (max-width:600px){
     #menu{
@@ -68,6 +109,7 @@ footer{
     padding: 2rem;
     }
 }
+
 /*Brytepunkt*/
 @media only screen and (min-width:600px){
     #grid-container{
@@ -95,6 +137,10 @@ footer{
     }
 
     #ham{
+        display: none;
+    }
+
+    #close{
         display: none;
     }
 }

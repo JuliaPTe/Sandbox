@@ -25,6 +25,27 @@
 
             <main>
                 <h1>Main</h1>
+                <section>
+                    <!--En section må ikke ha en h-tagg. section brukes for sematikk. Ikke bytt det ut med div.-->
+                    <h2>Nyeste bilder</h2>
+                    
+                    <article>
+                        <h3>Himmel</h3>
+                        <picture>
+                            <!--Bare en img-tagg i picture-taggen-->
+                            <source media="(min-width: 1400px)" srcset="img/Himmel1920.jpg">
+                            <source media="(min-width: 900px)" srcset="img/Himmel1280.jpg">
+                            <!--Bildet i img-taggen burde være det minste bildet-->
+                            <img src="img/Himmel620.jpg" alt="Himmelbilde">
+                        </picture>
+                    </article>
+
+                    <!--Article er selvestendig innhold. det som er inni elefant har ikke noe med himmel og visa versa-->
+                    <article>
+                        <h3>Elefant</h3>
+                    </article>
+
+                </section>
             </main>
 
             <aside>

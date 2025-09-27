@@ -1,0 +1,74 @@
+:root{
+    --toppFarge: #b5decf;
+    --hoved: #7cc2a6;
+    --nederst: #f9bece;
+    --logo: #0e4a2c;
+
+    /*Lager størrelser for font*/
+    --small: clamp(14px, 1em + 1vw, 18px);
+    --medium: clamp(16px, 1em + 1vw, 20px);
+    --large: clamp(18px, 1em + 1vw, 24px);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: clamp(16px, 1em + 1vw, 30px);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    font-size: 1rem;
+}
+
+header, main, footer{
+    padding: 1rem;
+}
+
+#alt{
+    height: inherit;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "topp" 
+                        "hovedinnhold"  
+                        "bunn"
+}
+
+/*topp*/
+header{
+    background-color: var(--toppFarge);
+    grid-area: topp;
+
+    nav{
+        ul{
+            list-style: none;
+            li{
+                a{
+                    text-decoration: none;
+                    color: #000
+                }
+
+            }
+        }
+    }
+}
+
+#HovedLogo{
+    color: var(--logo);
+    font-size: 50px;
+}
+
+#toppSection{
+    background-color: var(--hoved);
+    padding: 1rem;
+}
+
+#toppSBtn{
+    background-color: var(--logo);
+    color: #fff;
+}

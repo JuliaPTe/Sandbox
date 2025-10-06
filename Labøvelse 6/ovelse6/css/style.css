@@ -4,6 +4,7 @@
 ----------------------------------------------------- */
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 /* -----------------------------------------------------
@@ -249,4 +250,33 @@ h2 {
 ----------------------------------------------------- */
 #some i {
     font-size: 40px;
+}
+
+@media only screen and (min-width:680px){
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        nav{
+         display: flex;
+         ul{
+            display: flex;
+         }
+    }
+
+    .hidden{
+        display: inline-block;
+    }
+}
+
+main{
+   section{
+
+   }
+   #changde-order{
+
+   }
+}
+
 }

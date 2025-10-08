@@ -13,6 +13,7 @@ a{
     display: inline-block;
     color: #000;
     text-decoration: none;
+    padding: 1rem;
 }
 
 img{
@@ -55,6 +56,10 @@ img{
 
     figure{
         margin: 0;
+
+        img{
+            height: 100%;
+        }
     }
 
     section{
@@ -62,7 +67,7 @@ img{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        align-content: center;
     }
 }
 
@@ -116,6 +121,24 @@ img{
     display: none;
 }
 
+#menu{
+    list-style: none;
+    margin: 0;
+
+    li:first-child{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+#close{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .icon-btn{
     background-color: transparent;
     border: none;
@@ -155,12 +178,20 @@ img{
         display: inline-block;
     }
 
+    .btn{
+        background-color: #ff911b;
+        color: #000;
+    }
+
     #menu{
-        ul{
+    
             display: flex;
             gap: 1rem;
 
-        }
+            li a:hover{
+                text-decoration: underline;
+            }
+
     }
 
     #ham{
@@ -168,6 +199,10 @@ img{
     }
 
     #close{
+        display: none;
+    }
+
+    .group{
         display: none;
     }
 }

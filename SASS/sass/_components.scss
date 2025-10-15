@@ -1,3 +1,11 @@
+@use "colors";
+
+@mixin colorTamplate($BGcolor, $borderColor, $textColor){
+    background-color: $BGcolor;
+    border-color: $borderColor;
+    color: $textColor;
+}
+
 /*Hvordan man lager en placeholder-klasse*/
 %box-shadow{
     box-shadow: 10px 10px 20px colors.$lightGrey;
@@ -15,21 +23,19 @@
 
 .succsess{
     @extend .card;
-    background-color: colors.$succsessBGcolor;
+    @include colorTamplate(colors.$succsessBGcolor, colors.$succsessBorderColor, colors.$succsessTextColor );
+   /*Det over isteden for det under*/
+    /*background-color: colors.$succsessBGcolor;
     border-color: colors.$succsessBorderColor;
-    color: colors.$succsessTextColor;
+    color: colors.$succsessTextColor;*/
 }
 
 .warning{
     @extend .card;
-    background-color: colors.$warningBGcolor;
-    border-color: colors.$warningBorderColor;
-    color: colors.$warningTextColor;
+    @include colorTamplate(colors.$warningBGcolor, colors.$warningBorderColor, colors.$warningTextColor );
 }
 
 .error{
     @extend .card;
-    background-color: colors.$errorBGcolor;
-    border-color: colors.$errorBorderColor;
-    color: colors.$errorTextColor
+    @include colorTamplate(colors.$errorBGcolor, colors.$errorBorderColor, colors.$errorTextColor );
 }

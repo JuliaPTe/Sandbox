@@ -1,6 +1,10 @@
+/*Husk å linke til de like sass filene*/
 @use "fonts";
 @use "colors";
 @use "layout";
+@use "compontsen";
+
+/*Bare det som står her blir gjort om til css som vises på nettsiden*/
 
 body{
     margin: 0;

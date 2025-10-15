@@ -1,0 +1,35 @@
+/*Hvordan man lager en placeholder-klasse*/
+%box-shadow{
+    box-shadow: 10px 10px 20px colors.$lightGrey;
+}
+
+.card{
+    border: 1px solid colors.$lightGrey;
+    padding: 1rem;
+    flex: 1 1 calc(31% - 20px);
+    min-width: 250px;
+    border-radius: 5px;
+
+    @extend %box-shadow;
+}
+
+.succsess{
+    @extend .card;
+    background-color: colors.$succsessBGcolor;
+    border-color: colors.$succsessBorderColor;
+    color: colors.$succsessTextColor;
+}
+
+.warning{
+    @extend .card;
+    background-color: colors.$warningBGcolor;
+    border-color: colors.$warningBorderColor;
+    color: colors.$warningTextColor;
+}
+
+.error{
+    @extend .card;
+    background-color: colors.$errorBGcolor;
+    border-color: colors.$errorBorderColor;
+    color: colors.$errorTextColor
+}
